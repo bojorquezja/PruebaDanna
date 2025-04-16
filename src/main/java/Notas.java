@@ -6,11 +6,10 @@ public class Notas {
     
     //Constructor 
 
-    public Notas(double Nota1, double Nota2, double Nota3, double Promedio) {
+    public Notas(double Nota1, double Nota2, double Nota3) {
         this.Nota1 = Nota1;
         this.Nota2 = Nota2;
         this.Nota3 = Nota3;
-        this.Promedio = Promedio;
     }
     
     //Metodos Get y Set
@@ -47,5 +46,15 @@ public class Notas {
         this.Promedio = Promedio;
     }
     
+    //Metodos Adicionales
+    public double Promedio(){
+        
+        return (Nota1 + Nota2 + Nota3)/3;
+    }
+    
+    public String MostrarInformacion(){
+        
+        return "Promedio: " + Promedio();
+    }
     
 }
