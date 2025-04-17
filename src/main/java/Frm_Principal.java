@@ -47,6 +47,11 @@ public class Frm_Principal extends javax.swing.JFrame {
         lbl_Nota3.setText("Nota 3:");
 
         btn_Calcular.setText("Calcular");
+        btn_Calcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_CalcularActionPerformed(evt);
+            }
+        });
 
         btn_Salir.setText("Salir");
         btn_Salir.addActionListener(new java.awt.event.ActionListener() {
@@ -138,6 +143,20 @@ public class Frm_Principal extends javax.swing.JFrame {
     private void btn_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SalirActionPerformed
         System.exit(0);
     }//GEN-LAST:event_btn_SalirActionPerformed
+
+    private void btn_CalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CalcularActionPerformed
+        
+        double nota1 = Double.parseDouble(txt_Nota1.getText());
+        double nota2 = Double.parseDouble(txt_Nota2.getText());
+        double nota3 = Double.parseDouble(txt_Nota3.getText());
+        
+        //Crear el objeto
+        Notas objeto = new Notas(nota1, nota2, nota3);
+        
+        txa_Informacion.append(objeto.MostrarInformacion());
+
+        
+    }//GEN-LAST:event_btn_CalcularActionPerformed
 
     /**
      * @param args the command line arguments
